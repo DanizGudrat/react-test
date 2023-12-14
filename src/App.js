@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState, useEffect } from 'react';
+import './App.css'
+import Count from './Count';
+import Increment from './Increment';
+import Decrement from './Decrement';
+import IncrementBy from './IncrementBy';
+import Main from './Main';
 
 function App() {
+  const [data,setData] = useState()
+let a = 10;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  //  <div className={a== 100 ? "red" : "blue"}>
+   <div>
+dark mode - on
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <button>change mode</button>
+    {/* <Main isAvaliable={false}/>
+    {a == 10 ? "salam" : "hello"} */}
+   
+
+<Count/>
+<Increment/>
+    <Decrement/>
+    <IncrementBy/>
+   </div>
   );
 }
 
